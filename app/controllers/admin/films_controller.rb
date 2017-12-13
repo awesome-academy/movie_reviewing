@@ -1,4 +1,4 @@
-class Admin::FilmsController < ApplicationController
+class Admin::FilmsController < Admin::BaseController
   before_action :load_films, except: [:new, :create, :index]
 
   def index

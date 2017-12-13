@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      UserMailer.account_activation @user .deliver
+      UserMailer.account_activation(@user).deliver
       flash[:info] = t "flash.check_email"
       redirect_to root_url
     else
@@ -38,7 +38,7 @@ class UsersController < ApplicationController
     end
   end
 
-   def destroy
+  def destroy
     if @user.destroy
       flash[:success] = t "flash.delete_user"
     else
@@ -57,14 +57,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user) .permit :name, :email, :password, :password_confirmation,:dob, :avatar
-  end
-
-  def logged_in_user
-    unless logged_in?
-      flash[:danger] = t "flash.login"
-      redirect_to login_url
-    end
+    params.require(:user).permit :name, :email, :password, :password_confirmation, :dob, :avatar
   end
 
   def correct_user
@@ -77,5 +70,4 @@ class UsersController < ApplicationController
     flash[:danger] = t "flash.load_user_fail" + params[:id]
     redirect_to root_path
   end
-
 end

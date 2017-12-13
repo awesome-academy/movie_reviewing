@@ -36,6 +36,10 @@ en:
     create_post_success: "Create Post success"
     create_post_fail: "Create Post Fail"
     post_update_success: "Update Post success"
+    permission_access: "You don't have permission to access"
+    active_account: "Account not activated."
+    check_account: "Check your email for the activation link."
+    invalid: "Invalid email/password combination"
 
   form:
     name: "Name"
@@ -47,16 +51,22 @@ en:
     avatar: "Avatar"
 
   layouts:
+    admin_header:
+      dashboard: "Dashboard"
     header:
       home: "Home"
-      about_us: "About Us"
       help: "Help"
       search: "Search"
-      submit: "Search"
       review_movie: "Review Film"
-      login: "Log in"
+      login: " Log in"
       logout: "Log out"
-    application:
+      sign_up: " SignUp"
+      profile: "Profile"
+    footer:
+      address: "Address"
+      about_us: "About Us"
+      contact_us: "Contact Us"
+      language: "Language"
       english: "English"
       vietnamese: "Vietnamese"
 

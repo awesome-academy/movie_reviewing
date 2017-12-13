@@ -18,8 +18,10 @@ gem "will_paginate"
 gem "config"
 gem "rails-i18n"
 gem "bcrypt"
+gem "faker"
 gem "carrierwave", "1.1.0"
 gem "mini_magick", "4.7.0"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

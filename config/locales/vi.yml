@@ -36,6 +36,10 @@ vi:
     create_post_success: "Tạo bài đánh giá thành công"
     create_post_fail: "Tạo bài đánh giá thất bại"
     post_update_success: "Cập nhật thành công"
+    permission_access: "Bạn không có quyền truy cập"
+    active_account: "Tài khoản chưa được kích hoạt"
+    check_account: "Kiểm tra email để kích hoạt tài khoản"
+    invalid: "Email hoặc mật khẩu của bạn không đúng"
 
   form:
     name: "Tên người dùng"
@@ -47,16 +51,22 @@ vi:
     avatar: "Ảnh đại diện"
 
   layouts:
+    admin_header:
+      dashboard: "Bảng Điều Khiển"
     header:
       home: "Trang chủ"
-      about_us: "Về chúng tôi"
       help: "Hỗ trợ"
       search: "Nội dung tìm kiếm"
-      submit: "Tìm"
       review_movie: "Đánh Giá Phim"
-      login: "Đăng nhập"
+      login: " Đăng nhập"
       logout: "Đăng xuất"
-    application:
+      sign_up: " Đăng ký"
+      profile: "Profile"
+    footer:
+      address: "Địa chỉ"
+      about_us: "Về chúng tôi"
+      contact_us: "Liên Hệ"
+      language: "Ngôn ngữ"
       english: "Tiếng Anh"
       vietnamese: "Tiếng Việt"
 
