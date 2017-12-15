@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to post.title, post_review_path(post) %></td>
+  <td><%= post.content %></td>
+  <td>
+    <% if post.approve %><%= t ".approve_true" %>
+      <% else %> <%= t ".approve_fail" %>
+    <% end %>
+  </td>
+  <td><%= link_to t(".delete"), post_review_path(post), method: :delete, data: {confirm: t(".you_sure")} %>
+  </td>
+  <td><%= link_to t(".edit_post"), edit_post_review_path(post) %></td>
+</tr>

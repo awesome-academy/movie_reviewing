@@ -1,0 +1,10 @@
+paginate_number:
+  per_page: 10
+film:
+  describe_maximum: 450
+user:
+  name_maximum: 50
+  email_maximum: 255
+  password_minimum: 6
+  expire_hours: 2
+

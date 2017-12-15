@@ -1,0 +1,171 @@
+vi:
+  flash:
+    find_user: "Không tìm thấy người dùng với id: "
+    create_new_film: "Tạo phim mới thành công"
+    fail_create_film: "Tạo phim thất bại"
+    update_film: "Chỉnh sửa phim thành công"
+    fail_update_film: "Chỉnh sửa phim không thành công"
+    delete_film: "Phim đã được xóa"
+    fail_delete_film: "Xóa phim không thành công"
+    load_film: "Không tìm thấy phim với id là "
+    activate: "Tài khoản đã được kích hoạt!"
+    invalid_activate: "Đường dẫn không hợp lệ"
+    check_email: "Kiểm tra email để kích hoạt tài khoản"
+    success: "Tài khoản đã được kích hoạt"
+    invalid_link: "Đường dẫn không hợp lệ"
+    update_profile: "Hồ sơ đã được cập nhật"
+    delete_user: "Người dùng đã bị xóa"
+    login: "Làm ơn đăng nhập"
+    password_reset: "Mật khẩu mới đã được gửi qua email của bạn"
+    email_notfound: "Không tìm thấy địa chỉ email"
+    not_empty: "Không thể bỏ trống"
+    reset: "Mật khẩu đã được đặt lại"
+    password_expired: "Mật khẩu đặt lại đã hết hạn"
+    active_fail: "Tài khoản không được kích hoạt"
+    check_link: "Kiểm tra email để lấy đường dẫn kích hoạt"
+    invalid_email_password: "Email / mật khẩu không hợp lệ"
+    cant_empty: "Không thể bỏ trống"
+    account_activation: "Kích hoạt tài khoản"
+    password_reset_1: "Kích hoạt lại mật khẩu"
+    cant_load: "Không thể tìm thấy người dùng"
+    update_success: "Cập nhật thành công"
+    update_fail: "Cập nhật thất bại"
+    destroy_success: "Xóa người dùng thành công "
+    destroy_fail: "Xóa người dùng thất bại"
+    load_user_fail: "Không thể tìm thấy người dùng"
+    create_post_success: "Tạo bài đánh giá thành công"
+    create_post_fail: "Tạo bài đánh giá thất bại"
+    post_update_success: "Cập nhật thành công"
+    permission_access: "Bạn không có quyền truy cập"
+    active_account: "Tài khoản chưa được kích hoạt"
+    check_account: "Kiểm tra email để kích hoạt tài khoản"
+    invalid: "Email hoặc mật khẩu của bạn không đúng"
+
+  form:
+    name: "Tên người dùng"
+    dob: "Ngày tháng năm sinh"
+    password: "Mật khẩu "
+    password_confirm: "Mật khẩu xác nhận lại"
+    create_user: "Chào mừng bạn đến với trang web của tôi"
+    email: "Email"
+    avatar: "Ảnh đại diện"
+
+  layouts:
+    admin_header:
+      dashboard: "Bảng Điều Khiển"
+    header:
+      home: "Trang chủ"
+      help: "Hỗ trợ"
+      search: "Nội dung tìm kiếm"
+      review_movie: "Đánh Giá Phim"
+      login: " Đăng nhập"
+      logout: "Đăng xuất"
+      sign_up: " Đăng ký"
+      profile: "Profile"
+    footer:
+      address: "Địa chỉ"
+      about_us: "Về chúng tôi"
+      contact_us: "Liên Hệ"
+      language: "Ngôn ngữ"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+
+  admin:
+    films:
+      index:
+        film_list: "Danh sách phim"
+        create_new_film: "Tạo Phim Mới"
+        image: "Ảnh"
+        name: "Tên Phim"
+        play_time: "Thời lượng"
+        trailer: "Link Trailer"
+        imdb_rate: "Điểm IMDB"
+        describe: "Mô tả"
+      film:
+        edit_film: "Chỉnh sửa phim"
+        delete: "Xóa bỏ"
+        you_sure: "Bạn chắc chắn muốn xóa không?"
+      edit:
+        name: "Tên phim"
+        play_time: "Thời lượng"
+        imdb: "Điểm imdb"
+        describe: "Mô tả"
+      new:
+        name: "Tên phim"
+        play_time: "Thời lượng"
+        imdb: "Điểm imdb"
+        describe: "Mô tả"
+
+  sessions:
+    new:
+      input_email: "Nhập email vào đây"
+      input_password: "Nhập mật khẩu vào đây"
+      remember_me: "Nhớ tài khoản"
+      login: "Đăng nhập"
+      sign_up: "Đăng kí tài khoản"
+      new_user: "Người dùng mới"
+      forgot_password: "(quên mật khẩu)"
+
+  password_resets:
+    new:
+      submit_button: "Gửi"
+      forgot_password: "Quên mật khẩu"
+    edit:
+      reset_password: "Khôi phục mật khẩu"
+  share:
+    error_messages:
+      error: "Lỗi"
+
+  users:
+    edit:
+      update_profile: "Cập nhật tài khoản"
+      edit_user: "Cập nhật thông tin"
+
+      close: "Đóng"
+      update: "Cập nhật thông tin cá nhân"
+      name: "Nhập tên"
+      email: "Nhập email"
+      dob: "Ngày sinh"
+
+    show:
+      edit: "Sửa"
+      hello: "Xin chào"
+    index:
+      all_user: "Tất cả người dùng"
+    new:
+      signup: "Đăng kí tài khoản"
+    form:
+      input_name: "Nhập tên bạn vào đây"
+      input_dob: "Nhập ngày tháng năm sinh vào đây"
+      input_email: "Nhập email vào đây"
+      input_password: "Nhập mật khẩu vào đây"
+      input_password_confirm: "Nhập lại mật khẩu vào đây"
+      create: "Tạo tài khoản"
+      save_change: "Lưu thay đổi"
+
+  post_reviews:
+    new:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      fill_title: "...Nhập tiêu đề..."
+      fill_content: "...Nhập nội dung..."
+      submit_create: "Tạo bài viết"
+    index:
+      my_post: "Danh sách bài viết của tôi"
+      approve: "Phê duyệt"
+    edit:
+      submit_edit: "Xác nhận"
+      edit_post: "Sửa bài viết"
+  shared:
+    post:
+      edit_post: "Sửa"
+      delete: "Xóa"
+      approve_true: "Đã duyệt"
+      approve_fail: "Chưa duyệt"
+      you_sure: "Chắc chưa?"
+    index:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      approve: "Phê duyệt"
+      my_post_list: "Bài viết của tôi"
+      create_new_post: "Tạo bài viết mới"

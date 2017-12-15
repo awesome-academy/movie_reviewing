@@ -1,0 +1,17 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: @user %>
+  <%= f.label :name, t("form.name") %>
+  <%= f.text_field :name, class: "form-control", placeholder: t("users.form.input_name") %>
+  <%= f.label :dob, t("form.dob") %>
+  <%= f.date_field :dob, class: "form-control", placeholder: t("users.form.input_dob") %>
+  <%= f.label :email, t("form.email") %>
+  <%= f.email_field :email, class: "form-control", placeholder: t(".input_email") %>
+  <%= f.label :avatar, t("form.avatar") %>
+  <%= f.file_field :avatar %>
+  <%= f.label :password, t("form.password") %>
+  <%= f.password_field :password, class: "form-control", placeholder: t(".input_password") %>
+  <%= f.label :password_confirmation, t("form.password_confirm") %>
+  <%= f.password_field :password_confirmation, class: "form-control", placeholder: t(".input_password_confirm") %>
+  <%= f.submit t(".save_change"), class: "btn btn-primary" %>
+<% end %>
+

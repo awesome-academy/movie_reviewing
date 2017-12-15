@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <h2><%= t ".edit_post" %></h2>
+    <div class="col-md-6">
+      <%= form_for @post do |f| %>
+        <%= f.label :title, t ".title" %>
+        <%= f.text_field :title, placeholder: t ".fill_title"  %>
+        </br>
+        <%= f.label :content, t ".content" %>
+        <%= f.text_area :content, placeholder: t ".fill_content" %>
+        </br>
+        <%= f.submit t ".submit_edit", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

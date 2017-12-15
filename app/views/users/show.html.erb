@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-6">
+      <div class="well well-sm">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="img-rounded img-responsive" /><%= image_tag @user.avatar.url if @user.avatar? %>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-8">
+            <h4><%= @user.name %></h4>
+            <p>
+              <i class="glyphicon glyphicon-envelope"></i> <%= @user.email %>
+              <br />
+              <i class="glyphicon glyphicon-gift"></i><%= @user.dob %>
+            </p>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal-<%= @user.id %>"><%= t ".edit"%></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to t(".create_new_post"), new_post_review_path(@user), class: "btn btn-info" %>
+  <%= render "shared/index" %>
+  <div class="modal fade" id="myModal-<%= @user.id %>" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><%= t ".hello"%>, <%= @user.name %></h4>
+        </div>
+        <div class="modal-body">
+          <%= render "edit" %>
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal"><%= t "users.edit.close"%></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

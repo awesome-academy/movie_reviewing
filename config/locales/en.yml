@@ -1,0 +1,171 @@
+en:
+  flash:
+    find_user: "Can't find user with id: "
+    create_new_film: "Complete create film"
+    fail_create_film: "Fail create film"
+    update_film: "Film updated!"
+    fail_update_film: "Fails updated!"
+    delete_film: "Film deleted!"
+    fail_delete_film: "Fails delete!"
+    load_film: "Not film with id "
+    activate: "Account activated!"
+    invalid_activate: "Invalid activation link"
+    check_email: "Please check your email to activate your account."
+    success: "Account activated!"
+    invalid_link: "Invalid activation link"
+    update_profile: "Profile updated"
+    delete_user: "User deleted"
+    login: "Please log in."
+    password_reset: "Email sent with password reset instructions"
+    email_notfound: "Email address not found"
+    not_empty: "Not Empty"
+    reset: "Password has been reset."
+    password_expired: "Password reset has expired."
+    active_fail: "Account not activated."
+    check_link: "Check your email for the activation link."
+    invalid_email_password: "Invalid email/password combination"
+    cant_empty: "can't be empty"
+    account_activation: "Account activation"
+    password_reset_1: "Password reset"
+    cant_load: "Can't load user"
+    update_success: "Update Complete"
+    update_fail: "Failed update"
+    destroy_success: "Succeeded delete"
+    destroy_fail: "Failed delete"
+    load_user_fail: "Can't find user with id "
+    create_post_success: "Create Post success"
+    create_post_fail: "Create Post Fail"
+    post_update_success: "Update Post success"
+    permission_access: "You don't have permission to access"
+    active_account: "Account not activated."
+    check_account: "Check your email for the activation link."
+    invalid: "Invalid email/password combination"
+
+  form:
+    name: "Name"
+    dob: "Date of birth"
+    password: "Password"
+    password_confirm: "Password Confirmation"
+    create_user: "Welcome to my page"
+    email: "Email"
+    avatar: "Avatar"
+
+  layouts:
+    admin_header:
+      dashboard: "Dashboard"
+    header:
+      home: "Home"
+      help: "Help"
+      search: "Search"
+      review_movie: "Review Film"
+      login: " Log in"
+      logout: "Log out"
+      sign_up: " SignUp"
+      profile: "Profile"
+    footer:
+      address: "Address"
+      about_us: "About Us"
+      contact_us: "Contact Us"
+      language: "Language"
+      english: "English"
+      vietnamese: "Vietnamese"
+
+  admin:
+    films:
+      index:
+        film_list: "Film List"
+        create_new_film: "Create New Film"
+        image: "Image"
+        name: "Name"
+        play_time: "Play Time"
+        trailer: "Link Trailer"
+        imdb_rate: "IDBM Rate"
+        describe: "Describe"
+      film:
+        edit_film: "Edit Film"
+        delete: "Delete"
+        you_sure: "You sure?"
+      edit:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+      new:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+
+  sessions:
+    new:
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      remember_me: "Remember me on this computer"
+      login: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+      forgot_password: "(forgot password)"
+
+  password_resets:
+    new:
+      submit_button: "Submit"
+      forgot_password: "Forgot password"
+    edit:
+      reset_password: "Reset password"
+  share:
+    error_messages:
+      error: "Error"
+
+  users:
+    edit:
+      update_profile: "Update Your Profile"
+      edit_user: "Edit User"
+
+      close: "Close"
+      update: "Update Your Profile"
+      name: "Name"
+      email: "Email"
+      dob: "Date of birth"
+
+    show:
+      edit: "Edit Profile"
+      hello: "Hello"
+    index:
+      all_user: "All User"
+    new:
+      signup: "Sign Up"
+    form:
+      input_name: "Please input your name here"
+      input_dob: "Input your date of birth here"
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      input_password_confirm: "input your password confirmation"
+      create: "Create my account"
+      save_change: "Save changes"
+
+  post_reviews:
+    new:
+      title: "Title"
+      content: "Content"
+      fill_title: "...Fill title..."
+      fill_content: "...Fill content..."
+      submit_create: "Create Post"
+    index:
+      my_post: "List Post "
+      approve: "Approve"
+    edit:
+      submit_edit: "Submit"
+      edit_post: "Edit Post"
+  shared:
+    post:
+      edit_post: "Edit"
+      delete: "Delete"
+      approve_true: "True"
+      approve_fail: "False"
+      you_sure: "You sure?"
+    index:
+      title: "Title"
+      content: "Content"
+      approve: "Approve"
+      my_post_list: "My Post"
+      create_new_post: "Create New Post"

@@ -1,0 +1,20 @@
+<div class="container container-fluid">
+  <div class="row">
+    <h2 class="sub-header"><%= t ".my_post_list" %></h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t ".title" %></th>
+            <th><%= t ".content" %></th>
+            <th><%= t ".approve" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "shared/post", collection: @posts %>
+        </tbody>
+      </table>
+      <%= will_paginate @posts %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+  <ul>
+    <li> <%= @film.name %> </li>
+    <li> <%= @film.image %> </li>
+    <li>
+      <%= t "admin.films.index.play_time" %>: <%= @film.play_time %>
+    </li>
+    <li>
+      <%= t "admin.films.index.imdb_rate" %>: <%= @film.imdb_rate %>
+    </li>
+    <li>
+      <iframe width="560" height="315" src= "https://www.youtube.com/embed/<%= @film.link_trailer %>">
+        frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    </li>
+    <li> <%= @film.describe %> </li>
+  </ul>
+</div>

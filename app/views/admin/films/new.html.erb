@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <h2><%= t("admin.films.index.create_new_film")%></h2>
+    <div class="col-md-6">
+      <%= form_for [:admin, @film] do |f| %>
+        <%= f.label :name, t("admin.films.new.name") %>
+        <%= f.text_field :name, placeholder: t("admin.films.index.name") %> </br>
+        <%= f.label :play_time, t("admin.films.play_time") %>
+        <%= f.number_field :play_time, placeholder: t("admin.films.index.play_time")%> </br>
+        <%= f.label :link_trailer %>
+        <%= f.text_field :link_trailer, placeholder: t("admin.films.index.trailer") %> </br>
+        <span class="picture">
+          <%= f.file_field :picture, accept: "image/jpeg,image/gif,image/png" %>
+        </span> </br>
+        <%= f.label :imdb_rate, t("admin.films.new.imdb") %>
+        <%= f.number_field :imdb_rate, step: :any, placeholder: t("admin.films.index.imdb_rate") %> </br>
+        <%= f.label :describe, t("admin.films.new.describe") %>
+        <%= f.text_area :describe, placeholder: t("admin.films.index.describe") %> </br>
+        <%= f.submit t("admin.films.index.create_new_film"), class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

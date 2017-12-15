@@ -1,0 +1,21 @@
+<div class="container container-fluid">
+  <div class="row">
+    <h2 class="sub-header"><%= t ".post_list" %></h2>
+    <%= t ".new.submit_create", class: "btn btn-info" %>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t ".new.title" %></th>
+            <th><%= t ".new.content" %></th>
+            <th><%= t ".approve" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "shared/post", collection: @posts %>
+        </tbody>
+      </table>
+      <%= will_paginate @posts %>
+    </div>
+  </div>
+</div>

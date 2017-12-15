@@ -1,0 +1,24 @@
+<div class="container container-fluid">
+  <div class="row">
+    <h2 class="sub-header"><%= t ".film_list" %></h2>
+    <%= link_to t(".create_new_film"), new_admin_film_path, class: "btn btn-info"%>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t ".image" %></th>
+            <th><%= t ".name" %></th>
+            <th><%= t ".play_time" %></th>
+            <th><%= t ".trailer" %></th>
+            <th><%= t ".imdb_rate" %></th>
+            <th><%= t ".describe" %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: "film", collection: @films %>
+        </tbody>
+      </table>
+      <%= will_paginate @films %>
+    </div>
+  </div>
+</div>
