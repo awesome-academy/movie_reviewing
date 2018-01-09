@@ -16,4 +16,14 @@
     <% end %>
     <p><%= t ".new_user" %> <%= link_to t(".sign_up"), signup_path %></p>
   </div>
+
+  <div id="user_nav">
+    <% if current_user %>
+      Signed in as <strong><%= current_user.name %></strong>!
+      <%= link_to "Sign out", session_path(current_user), method: :delete %>
+    <% else %>
+      <%= link_to "Sign in with Facebook", "/auth/facebook" %>
+    <% end %>
+  </div>
+  <button scope="public_profile,email" onclick="checkLoginState()">Login Facebook</button>
 </div>

@@ -57,6 +57,7 @@ vi:
     update_rate_failed: "Cập nhật đánh giá thất bại"
     destroy_rate_succeed: "Xóa đánh giá thành công"
     destroy_rate_failed: "Xóa đánh giá thất bại"
+    login_face_failed: "Đăng nhập qua Facebook thất bại"
 
   form:
     name: "Tên người dùng"

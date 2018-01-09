@@ -1,22 +1,39 @@
 class SessionsController < ApplicationController
 
   def create
-    user = User.find_by email: params[:session][:email].downcase
-
-    if user && user.authenticate(params[:session][:password])
-      if user.activated?
+    auth = request.env["omniauth.auth"]
+    byebug
+    if auth.present?
+      user = User.from_omniauth(auth)
+      if user
+        render json: {
+          status: :success
+        }
         log_in user
-        params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-        user.admin ? redirect_back_or(admin_root_url) : redirect_back_or(root_url)
       else
-        message = t "flash.active_account"
-        message += t "flash.check_email"
-        flash[:warning] = message
-        redirect_to root_url
+        render json: {
+          status: :error,
+          message: t("flash.login_face_failed")
+        }
       end
     else
-      flash.now[:danger] = t "flash.invalid"
-      render :new
+      user = User.find_by email: params[:session][:email].downcase
+
+      if user && user.authenticate(params[:session][:password])
+        if user.activated?
+          log_in user
+          params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+          user.admin ? redirect_back_or(admin_root_url) : redirect_back_or(root_url)
+        else
+          message = t "flash.active_account"
+          message += t "flash.check_email"
+          flash[:warning] = message
+          redirect_to root_url
+        end
+      else
+        flash.now[:danger] = t "flash.invalid"
+        render :new
+      end
     end
   end
 

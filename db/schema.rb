@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 20180102235636) do
     t.string "activation_digest"
     t.boolean "activated", default: false
     t.datetime "activated_at"
-    t.string "oauth_token"
+    t.string "uid"
     t.datetime "oauth_exprires_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end

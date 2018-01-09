@@ -9,7 +9,6 @@ $gray: #777;
 $pink: #ff5e99;
 $blue-light: #cde9ea;
 
-
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
@@ -444,4 +443,5 @@ iframe {
 
 .delete_review:hover {
   cursor: pointer;
+  width: 40px;
 }

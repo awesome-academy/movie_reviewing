@@ -23,7 +23,12 @@ class Film < ApplicationRecord
     where(status: 1)
   end
 
+
   scope :search_film, -> (content){
     where("name LIKE ?", "%#{content}%")
   }
+
+  def audience_score
+    self.update_attributes avg_rate: Rating.average(:mark)
+  end
 end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  match "auth/:provider/callback", to: "sessions#create", via: [:get]
+  match "auth/failure", to: redirect("/"), via: [:get]
+  mount Ckeditor::Engine => "/ckeditor"
   root "pages#home"
   get "pages/home"
   get "pages/about"

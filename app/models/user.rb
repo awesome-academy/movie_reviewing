@@ -63,6 +63,20 @@ class User < ApplicationRecord
     reset_sent_at < Settings.expire_hours.hours.ago
   end
 
+  def self.from_omniauth(auth)
+    where(uid: auth.uid).first_or_create do |user|
+      user.uid = auth.uid
+      user.email = auth.info.email
+      user.avatar = auth.info.image
+      user.name = auth.info.name
+      user.oauth_exprires_at = Time.at(auth.credentials.expires_at)
+      user.activated = true
+      user.password_digest = auth.credentials.token
+      user.activation_digest = auth.credentials.token
+      user.activated_at = Time.now
+    end
+  end
+
   private
 
   def downcase_email
