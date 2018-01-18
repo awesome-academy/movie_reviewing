@@ -95,7 +95,7 @@ ActiveRecord::Schema.define(version: 20180103125143) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "review"
-    t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id", unique: true
+    t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id"
     t.index ["film_id"], name: "index_ratings_on_film_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end

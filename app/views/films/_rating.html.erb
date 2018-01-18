@@ -1,22 +1,25 @@
-<div class="review-section well" id ="review-<%= rating.id %>">
-  <div class="row">
-    <div class="col-md-4 user-review">
-      <h4><%= rating.user.name %></h4>
-      <%= avatar_for rating.user %></br></br>
-      <%= rating.updated_at.strftime("%d-%m-%Y") %>&nbsp
-        |&nbspRating&nbsp <%= rating.mark %>/10&nbsp
-        <span class="star-color fa fa-star"></span></br>
-      <i><%= time_ago_in_words(rating.updated_at)%> <%= t ".ago" %></i>
+<% @ratings.each do |rating| %>
+  <div class="review-section well" id ="review-<%= rating.id %>">
+    <div class="row">
+      <div class="col-md-4 user-review">
+        <h4><%= rating.user.name %></h4>
+        <%= avatar_for rating.user %></br></br>
+        <%= rating.updated_at.strftime("%d-%m-%Y") %>&nbsp
+          |&nbspRating&nbsp <%= rating.mark %>/10&nbsp
+          <span class="star-color fa fa-star"></span></br>
+        <i><%= time_ago_in_words(rating.updated_at)%> <%= t ".ago" %></i>
+      </div>
+      <div class="col-md-8">
+        <p><%= rating.review %></p>
+      </div>
     </div>
-    <div class="col-md-8">
-      <p><%= rating.review %></p>
-    </div>
-  </div>
-  <% if current_user %>
-    <% if current_user?(rating.user) || current_user.admin? %>
-      <span class= "delete_review" onclick="delete_review(this)"
-        id ="<%= rating.id %>"><i class="fa fa-times" aria-hidden="true">
-        </i></span>
+    <% if current_user %>
+      <% if current_user?(rating.user) || current_user.admin? %>
+        <span class= "delete_review" onclick="delete_review(this)"
+          id ="<%= rating.id %>"><i class="fa fa-times" aria-hidden="true">
+          </i></span>
+      <% end %>
     <% end %>
-  <% end %>
-</div>
+  </div>
+<% end %>
+<%= will_paginate @ratings %>

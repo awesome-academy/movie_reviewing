@@ -1,27 +1,29 @@
 $(function(){
-  if($('.button-like')[0].id!="0"){
-    $('.btn-create').hide();
-    $('.btn-delete').show();
-  } else {
-    $('.btn-create').show();
-    $('.btn-delete').hide();
-  }
-  create_like = function(){
-    var post_id = $('#comment_post_review_id').val();
-    $.ajax({
-      method: 'POST',
-      url: '/post_reviews/'+ post_id + '/likes',
-      type: 'JSON',
-      data: {"likes": {"post_review_id": post_id}}
-    }).success(function(data){
-      if (data.status == "success") {
-        $('.button-like').append(data.content);
-        $('.btn-create').remove();
-      } else {
+  if($('.button-like')[0]){
+    if($('.button-like')[0].id!="0"){
+      $('.btn-create').hide();
+      $('.btn-delete').show();
+    } else {
+      $('.btn-create').show();
+      $('.btn-delete').hide();
+    }
+    create_like = function(){
+      var post_id = $('#comment_post_review_id').val();
+      $.ajax({
+        method: 'POST',
+        url: '/post_reviews/'+ post_id + '/likes',
+        type: 'JSON',
+        data: {"likes": {"post_review_id": post_id}}
+      }).success(function(data){
+        if (data.status == "success") {
+          $('.button-like').append(data.content);
+          $('.btn-create').remove();
+        } else {
+          alert('<%= I18n.t("flash.destroy_rate_failed") %>');
+        }
+      }).error(function(){
         alert('<%= I18n.t("flash.destroy_rate_failed") %>');
-      }
-    }).error(function(){
-      alert('<%= I18n.t("flash.destroy_rate_failed") %>');
-    });
-  };
+      });
+    };
+  }
 });
