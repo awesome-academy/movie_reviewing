@@ -1,0 +1,16 @@
+<fieldset>
+  <div class="row">
+    <div class="col-md-8">
+      <%= f.label :day_watching, t(".watching_day") %>
+      <%= f.date_field :day_watching, class: "form-control" %>
+      <%= f.fields_for :watching_times do |builder| %>
+        <%= render "watching_time_fields", f: builder %>
+      <% end %>
+      <%= link_to_add_fields f, :watching_times %>
+    </div>
+    <div class="col-md-4">
+      <%= f.hidden_field :_destroy %>
+      <%= link_to_remove_fields %>
+    </div>
+  </div>
+</fieldset>

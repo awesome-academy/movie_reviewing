@@ -1,0 +1,52 @@
+<div class="modal-header modal-header-login">
+  <button type="button" class="close" data-dismiss="modal">&times;
+  </button>
+  <h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    <%= t "users.new.signup" %></h2>
+</div>
+<div class="modal-body modal-body-login">
+  <%= form_for @user do |f| %>
+    <%= render "shared/error_messages", object: @user %>
+    <div class="form-group">
+      <span class="glyphicon glyphicon-user"></span>
+      <%= f.label :name, t("form.name") %>
+      <%= f.text_field :name, class: "form-control",
+        placeholder: t("users.form.input_name") %>
+    </div>
+    <div class="form-group">
+      <i class="fa fa-calendar" aria-hidden="true"></i>
+      <%= f.label :dob, t("form.dob") %>
+      <%= f.date_field :dob, class: "form-control",
+        placeholder: t("users.form.input_dob") %>
+    </div>
+    <div class="form-group">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+      <%= f.label :email, t("form.email") %>
+      <%= f.email_field :email, class: "form-control",
+        placeholder: t("users.form.input_email") %>
+    </div>
+    <div class="form-group">
+      <%= f.label :avatar, t("users.form.avatar") %>
+      <%= f.file_field :avatar %>
+    </div>
+    <div class="form-group">
+      <i class="fa fa-eye-slash" aria-hidden="true"></i>
+      <%= f.label :password, t("users.form.password") %>
+      <%= f.password_field :password, class: "form-control",
+        placeholder: t("users.form.input_password") %>
+    </div>
+    <div class="form-group">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <%= f.label :password_confirmation,
+        t("users.form.password_confirm") %>
+      <%= f.password_field :password_confirmation,
+        class: "form-control", placeholder:
+        t("users.form.input_password_confirm") %>
+    </div>
+    <div class="form-group">
+      <%= button_tag type: :submit, class: "btn btn-success btn-block" do %>
+        <span class="glyphicon glyphicon-off"></span>
+      <% end %>
+    </div>
+  <% end %>
+</div>

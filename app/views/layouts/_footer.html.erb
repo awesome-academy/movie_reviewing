@@ -1,0 +1,32 @@
+<footer class="container container-fluid" id= "fix-style-footer">
+  <div class="row">
+    <div class="col-sm-4">
+      <h4><%= t(".address")%> 1:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4><%= t(".address")%> 2:</h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="col-sm-4">
+      <h4><%= t(".about_us") %></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h4><%= t(".contact_us") %></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+        tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="col-sm-4">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+        <i class="fa fa-globe" aria-hidden="true"></i>
+        <%= t(".language") %>
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><%= link_to t(".english"), locale: "en" %></li>
+          <li><%= link_to t(".vietnamese"), locale: "vi" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

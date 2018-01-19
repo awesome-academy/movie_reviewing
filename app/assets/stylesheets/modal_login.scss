@@ -1,0 +1,31 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+$green-modal: #5cb85c;
+$white-modal: #f9f9f9;
+
+.modal-header-login, .close {
+    background-color: $green-modal;
+    color: $white-modal !important;
+    text-align: center;
+    font-size: 30px;
+    padding: 35px 50px;
+}
+
+.modal-body-login {
+  padding: 40px 50px;
+}
+
+.modal-footer-login {
+    background-color: $white-modal;
+}
+
+.login_via_face{
+  margin-top: 30px;
+}
+
+.nav-tabs.nav-justified > .active > a {
+  background-color: $green-modal !important;
+  color: $white-modal !important;
+}

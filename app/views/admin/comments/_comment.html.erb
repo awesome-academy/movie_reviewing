@@ -1,0 +1,10 @@
+<tr>
+  <td><%= link_to comment.user.name, user_path(comment.user) %></td>
+  <td><%= link_to comment.post_review.title,
+    post_review_path(comment.post_review) %></td>
+  <td><%= comment.content %></td>
+  <td>
+    <%= link_to t(".delete"), admin_comment_path(comment), method: :delete,
+      data: {confirm: t(".you_sure")} %>
+  </td>
+</tr>

@@ -1,0 +1,20 @@
+$(function(){
+  delete_like = function(like){
+    var post_id = $('#comment_post_review_id').val();
+    var like_id = like.id;
+      $.ajax({
+        method: 'DELETE',
+        url: '/post_reviews/' + post_id  + '/likes/' + like_id
+      }).success(function(data){
+        if (data.status == "success"){
+          $('.button-like').append(data.content);
+          $('.btn-delete').remove();
+        } else {
+          alert("<%= I18n.t("flash.destroy_like_failed") %>");
+        }
+      }).error(function(){
+        alert("<%= I18n.t("flash.destroy_like_failed") %>");
+      });
+    }
+  }
+);

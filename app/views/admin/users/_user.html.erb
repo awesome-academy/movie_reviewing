@@ -1,0 +1,12 @@
+<tr>
+  <td><%= link_to user.name, user_path(user) %></td>
+  <td><%= user.email %></td>
+  <td><%= user.admin %></td>
+  <td><%= user.uid %></td>
+  <td>
+    <% if !user.admin? %>
+    <%= link_to t(".delete"), admin_user_path(user), method: :delete,
+      data: {confirm: t(".you_sure")} %>
+    <% end %>
+  </td>
+</tr>

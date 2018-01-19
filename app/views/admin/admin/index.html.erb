@@ -1,0 +1,122 @@
+<div class ="container">
+  <h1 class="page-header"><%= t "layouts.admin_header.dashboard" %></h1>
+  <div class="col-sm-3 col-md-2 sidebar">
+    <ul class="nav nav-sidebar">
+      <li><%= link_to t("admin.admin.user"), admin_users_path %></li>
+      <li><%= link_to t("admin.post.post_review"), admin_post_reviews_path %></li>
+      <li><%= link_to t("admin.admin.film"), admin_films_path %></li>
+      <li><%= link_to t("admin.admin.booking"), admin_bookings_path %></li>
+      <li><%= link_to t("admin.admin.comment"), admin_comments_path %></li>
+    </ul>
+  </div>
+  <div class="col-sm-9 col-md-10">
+    <div class="row placeholders">
+      <div class="col-md-6 col-sm-3 chart-dashboard">
+        <%= line_chart chart_user, title: t("admin.users.index.line_chart_users") %>
+      </div>
+      <div class="col-md-6 col-sm-3 chart-dashboard">
+        <%= pie_chart chart_post_review,
+          title: t("admin.post.pie_chart_post_reviews")%>
+      </div>
+      <div class="col-md-6 col-sm-3 chart-dashboard">
+        <%= pie_chart chart_film, title: t("admin.films.index.pie_chart_films") %>
+      </div>
+      <div class="col-md-6 col-sm-3 chart-dashboard">
+        <%= pie_chart chart_booking, title: t("admin.bookings.index.pie_chart_bookings") %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container tab-table-content">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a data-toggle="tab" href="#new_users"><%= t ".new_users" %>
+      &nbsp<span class="badge"><%=  @new_users.count %></span></a></li>
+    <li><a data-toggle="tab" href="#new_post_reviews"><%= t ".new_post_reviews" %>
+      &nbsp<span class="badge"><%=  @new_post_reviews.count %></a></li>
+    <li><a data-toggle="tab" href="#new_bookings"><%= t ".new_bookings" %>
+      &nbsp<span class="badge"><%=  @new_bookings.count %></a></li>
+    <li><a data-toggle="tab" href="#new_comments"><%= t ".new_comments" %>
+      &nbsp<span class="badge"><%=  @new_comments.count %></a></li>
+  </ul>
+
+  <div class="tab-content container">
+    <div id="new_users" class="tab-pane fade in active">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= t "admin.users.index.name" %></th>
+                <th><%= t "admin.users.index.email" %></th>
+                <th><%= t "admin.users.index.admin" %></th>
+                <th><%= t "admin.users.index.uid" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "admin/users/user", collection: @new_users %>
+            </tbody>
+          </table>
+          <%= will_paginate @new_users %>
+        </div>
+      </div>
+    </div>
+    <div id="new_post_reviews" class="tab-pane fade">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= t "shared.index.title" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "admin/post_reviews/post", collection: @new_post_reviews %>
+            </tbody>
+          </table>
+          <%= will_paginate @new_post_reviews %>
+        </div>
+      </div>
+    </div>
+    <div id="new_bookings" class="tab-pane fade">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= t "admin.bookings.index.name" %></th>
+                <th><%= t "admin.bookings.index.film" %></th>
+                <th><%= t "admin.bookings.index.watching_day" %></th>
+                <th><%= t "admin.bookings.index.watching_time" %></th>
+                <th><%= t "admin.bookings.index.quantity" %></th>
+                <th><%= t "admin.bookings.index.price" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "admin/bookings/booking", collection: @new_bookings %>
+            </tbody>
+          </table>
+          <%= will_paginate @new_bookings %>
+        </div>
+      </div>
+    </div>
+    <div id="new_comments" class="tab-pane fade">
+      <div class="row">
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= t "admin.comments.index.name" %></th>
+                <th><%= t "admin.comments.index.post_review" %></th>
+                <th><%= t "admin.comments.index.content" %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <%= render partial: "admin/comments/comment", collection: @new_comments %>
+            </tbody>
+          </table>
+          <%= will_paginate @new_comments %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

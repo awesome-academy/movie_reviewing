@@ -1,0 +1,23 @@
+<%= form_for @rating do |f|%>
+  <div class="star-rating">
+    <b><%= t ".rating_film" %>:&nbsp&nbsp</b>
+    <span class="fa fa-star-o" data-rating="1"></span>
+    <span class="fa fa-star-o" data-rating="2"></span>
+    <span class="fa fa-star-o" data-rating="3"></span>
+    <span class="fa fa-star-o" data-rating="4"></span>
+    <span class="fa fa-star-o" data-rating="5"></span>
+    <span class="fa fa-star-o" data-rating="6"></span>
+    <span class="fa fa-star-o" data-rating="7"></span>
+    <span class="fa fa-star-o" data-rating="8"></span>
+    <span class="fa fa-star-o" data-rating="9"></span>
+    <span class="fa fa-star-o" data-rating="10"></span>
+    <%= f.hidden_field :mark, class: "rating-value",
+      value: @rating ? @rating.mark : 0 %>
+    <%= f.hidden_field :film_id, class: "film-id-value", value: @film.id %>
+    <%= f.hidden_field :rating_id, class: "rating-id-value",
+      value: @rating.id %>
+    <%= f.text_area :review, class: "form-control"%>
+    <span class= "btn btn-primary submit-rating">
+      <%= t("films.show.submit") %></span>
+  </div>
+<% end %>

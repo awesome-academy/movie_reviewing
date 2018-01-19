@@ -1,0 +1,19 @@
+<tr id= "post_<%= post.id %>">
+  <td><%= link_to post.title, post_review_path(post) %></td>
+  <td><%= link_to t("shared.post.delete"), admin_post_review_path(post), method: :delete, data: {confirm: t("shared.post.you_sure")} %>
+  </td>
+  <td><%= link_to t("shared.post.edit_post"), edit_admin_post_review_path(post) %></td>
+  <td>
+    <%= form_for [:admin, post] do |f| %>
+      <%= f.hidden_field :title, value: post.title %>
+      <%= f.hidden_field :content, value: post.content %>
+      <% if post.approve? %>
+        <%= f.hidden_field :approve, value: false %>
+        <%= f.submit t("admin.post.unapprove") %>
+      <% else %>
+        <%= f.hidden_field :approve, value: true %>
+        <%= f.submit t("admin.post.approve") %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>

@@ -1,0 +1,21 @@
+$(function(){
+  delete_comment = function(comment){
+    var comment_id = comment.id;
+    var post_id = $('#comment_post_review_id').val();
+    var confirm_del = confirm('<%= I18n.t("post_reviews.comment.confirm") %>');
+    if (confirm_del == true) {
+      $.ajax({
+        method: 'DELETE',
+        url: '/post_reviews/' + post_id  + '/comments/' + comment_id
+      }).success(function(data){
+        if (data.status == "success"){
+          $('#comment-' + comment_id).hide();
+        } else {
+          alert('a');
+        }
+      }).error(function(){
+        alert('b');
+      });
+    }
+  }
+})

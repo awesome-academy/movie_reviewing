@@ -1,0 +1,52 @@
+<%= form_for [:admin, @film] do |f| %>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.label :name, t("admin.films.edit.name") %>
+      <%= f.text_field :name, class: "form-control",
+        placeholder: t("admin.films.index.name")%>
+      <%= f.label :play_time, t("admin.films.edit.play_time") %>
+      <%= f.number_field :play_time, class: "form-control",
+        placeholder: t("admin.films.index.play_time") %>
+      <%= f.label :link_trailer %>
+      <%= f.text_field :link_trailer, class: "form-control",
+        placeholder: t("admin.films.index.trailer") %>
+      <span class="picture">
+        <%= f.label :image, t("admin.films.edit.image") %>
+        <%= f.file_field :image %>
+      </span> </br>
+      <%= f.label :imdb_rate, t("admin.films.index.imdb_rate") %>
+      <%= f.number_field :imdb_rate, step: "any", class: "form-control",
+        placeholder: t("admin.films.edit.imdb_rate") %>
+      <%= f.label :describe , t("admin.films.edit.describe") %>
+      <%= f.text_area :describe, class: "form-control",
+        placeholder: t("admin.films.index.describe") %>
+      <%= f.label :status , t("admin.films.edit.status") %>
+      <%
+      film_status = []
+      Film::FILM_STATUS.each do |key, value|
+        film_status << [t("admin.films.edit." + key.to_s),value]
+      end
+      %>
+      <%= f.select :status, options_for_select(film_status, @film.status), {},
+        {class: "form-control"} %>
+    </div>
+    <div class="col-md-4">
+      <h4><%= t(".categories") %></h4>
+      <%= f.fields_for :categories do |builder| %>
+        <%= render "category_fields", f: builder %>
+      <% end %>
+      <%= link_to_add_fields f, :categories %>
+    </div>
+    <div class="col-md-4">
+      <%= f.fields_for :watching_days do |builder| %>
+        <%= render "watching_day_fields", f: builder %>
+      <% end %>
+      <%= link_to_add_fields f, :watching_days %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <%= f.submit t("admin.films.index.submit"), class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

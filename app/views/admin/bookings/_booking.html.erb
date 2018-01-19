@@ -1,0 +1,14 @@
+<tr>
+  <td><%= link_to booking.user.name, user_path(booking.user) %></td>
+  <td><%= link_to booking.watching_time.watching_day.film.name,
+   admin_film_path(booking.watching_time.watching_day.film) %></td>
+  <td><%= booking.watching_time.watching_day.day_watching.strftime("%d-%m-%Y") %></td>
+  <td><%= booking.watching_time.time.to_formatted_s(:time) %></td>
+  <td><%= booking.quantity %></td>
+  <td><%= number_with_precision(booking.watching_time.price,
+    precision: 0, separator: ',', delimiter: '.') %></td>
+  <td>
+    <%= link_to t(".delete"), admin_booking_path(booking), method: :delete,
+      data: {confirm: t(".you_sure")} %>
+  </td>
+</tr>

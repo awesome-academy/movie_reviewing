@@ -1,0 +1,30 @@
+<div class="row">
+  <%= pie_chart chart_post_review, title: t("admin.post.pie_chart_post_reviews")%>
+  <h2 class="sub-header"><%= t "admin.post.manager_post" %></h2>
+  <%= link_to t("users.show.create_new_post"), new_admin_post_review_path(@user), class: "btn btn-info" %>
+  <div class="table-responsive">
+  <h3><%= t "admin.post.list_pending" %></h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t "shared.index.title" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "post", collection: @posts_approved %>
+      </tbody>
+    </table>
+    <h3><%= t "admin.post.list_approved" %></h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t "shared.index.title" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "post", collection: @posts_pending %>
+      </tbody>
+    </table>
+    <%= will_paginate @posts %>
+  </div>
+</div>

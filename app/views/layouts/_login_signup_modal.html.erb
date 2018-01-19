@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="modal fade" id="Login_Modal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="active"><a data-toggle="tab" href="#logIn">
+            <%= t "sessions.new.login" %></a></li>
+          <li><a data-toggle="tab" href="#signUp">
+            <%= t "users.new.signup" %></a></li>
+        </ul>
+        <div class="tab-content">
+          <div id="logIn" class="tab-pane fade in active">
+            <%= render "layouts/login_form" %>
+          </div>
+          <div id="signUp" class="tab-pane fade">
+            <%= render "layouts/signup_form" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

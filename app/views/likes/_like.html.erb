@@ -1,0 +1,4 @@
+<%= button_tag(type: 'submit', class: "btn like btn-primary btn-create", id: (@like.present? ? @like.id : 0), onclick: "create_like()") do %>
+  <span class="glyphicon glyphicon-thumbs-up" id="create-like" ><%= @post.likes.count %></span> <%= t("post_reviews.like")%>
+<% end %>
+

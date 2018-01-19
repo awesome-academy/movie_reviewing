@@ -1,0 +1,62 @@
+$(function() {
+  var $star_rating = $('.star-rating .fa');
+
+  var SetRatingStar = function() {
+    return $star_rating.each(function() {
+      if (parseInt($star_rating.siblings('input.rating-value').val()) >= parseInt($(this).data('rating'))) {
+        return $(this).removeClass('fa-star-o').addClass('fa-star');
+      } else {
+        return $(this).removeClass('fa-star').addClass('fa-star-o');
+      }
+    });
+  };
+
+  $star_rating.on('click', function() {
+    $star_rating.siblings('input.rating-value').val($(this).data('rating'));
+    return SetRatingStar();
+  });
+
+  SetRatingStar();
+
+  var $rating_mark_start = $('#rating_mark').val();
+  var change_html = function(data){
+      $('.review-section-body').prepend(data.content);
+      $('.avg_rate_change').text(data.avg_rate.toFixed(1));
+  }
+
+  $('.submit-rating').on('click',function(event){
+    var $current_user_exit = $('#rating_current_user').val();
+    var $rating_mark = $('#rating_mark').val();
+    var $rating_id = $('#rating_rating_id').val();
+    var $review_content = $('#rating_review').val();
+    var $film_id = $('#rating_film_id').val();
+    params = {"rating": {"mark": $rating_mark, "film_id": $film_id, "review": $review_content, "id":  $rating_id}}
+    if($('#user_profile')[0]){
+      if($rating_mark_start == 0) {
+        var url_ajax = '/ratings';
+        var method = 'POST';
+      } else {
+        var url_ajax = '/ratings/'+ $rating_id;
+        var method = 'PATCH';
+      }
+      $.ajax({
+        method: method,
+        url: url_ajax,
+        data: params,
+        type: 'json'
+      }).success(function(data){
+        alert(data.message);
+        if (data.status == "success") {
+          $('#new_rating').hide();
+          $('#review-'+ data.data.id).hide();
+          $('#rating_rating_id').val(data.data.id);
+          change_html(data);
+        }
+      }).error(function(){
+        alert('<%= I18n.t("flash.update_rate_failed") %>');
+      });
+    } else {
+      $("#Login_Modal").modal();
+    }
+  });
+});

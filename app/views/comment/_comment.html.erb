@@ -1,0 +1,27 @@
+<div class="col-md-12" id ="comment-<%= comment.id %>">
+  <div class= "row">
+    <div class="col-md-3">
+      <div class= "user-review">
+        <%= avatar_for comment.user %>
+        <div class = "bold">
+          <%= (comment.user.name) %>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class = comment-content>
+        <%= comment.content %>
+      </div>
+      <i><%= comment.updated_at.strftime("%d-%m-%Y") %>&nbsp</i>
+      <i><%= time_ago_in_words(comment.updated_at)%> <%= t "post_reviews.comment.ago" %></i>
+    </div>
+    <% if current_user %>
+      <% if current_user?(comment.user) || current_user.admin? %>
+        <span class= "delete_comment" onclick="delete_comment(this)"
+          id ="<%= comment.id %>"><i class="fa fa-times" aria-hidden="true">
+          </i></span>
+      <% end %>
+    <% end %>
+  </div>
+  <br/>
+</div>

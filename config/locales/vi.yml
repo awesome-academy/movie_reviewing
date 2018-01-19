@@ -1,0 +1,335 @@
+vi:
+  alert:
+    login: "Vui lòng đăng nhập!"
+  flash:
+    find_user: "Không tìm thấy người dùng với id: "
+    create_new_film: "Tạo phim mới thành công"
+    fail_create_film: "Tạo phim thất bại"
+    update_film: "Chỉnh sửa phim thành công"
+    fail_update_film: "Chỉnh sửa phim không thành công"
+    delete_film: "Phim đã được xóa"
+    fail_delete_film: "Xóa phim không thành công"
+    load_film: "Không tìm thấy phim với id là "
+    activate: "Tài khoản đã được kích hoạt!"
+    invalid_activate: "Đường dẫn không hợp lệ"
+    check_email: "Kiểm tra email để kích hoạt tài khoản"
+    success: "Tài khoản đã được kích hoạt"
+    invalid_link: "Đường dẫn không hợp lệ"
+    update_profile: "Hồ sơ đã được cập nhật"
+    delete_user: "Người dùng đã bị xóa"
+    login: "Làm ơn đăng nhập"
+    password_reset: "Mật khẩu mới đã được gửi qua email của bạn"
+    email_notfound: "Không tìm thấy địa chỉ email"
+    not_empty: "Không thể bỏ trống"
+    reset: "Mật khẩu đã được đặt lại"
+    password_expired: "Mật khẩu đặt lại đã hết hạn"
+    active_fail: "Tài khoản không được kích hoạt"
+    check_link: "Kiểm tra email để lấy đường dẫn kích hoạt"
+    invalid_email_password: "Email / mật khẩu không hợp lệ"
+    cant_empty: "Không thể bỏ trống"
+    account_activation: "Kích hoạt tài khoản"
+    password_reset_1: "Kích hoạt lại mật khẩu"
+    cant_load: "Không thể tìm thấy người dùng"
+    update_success: "Cập nhật thành công"
+    update_fail: "Cập nhật thất bại"
+    destroy_success: "Xóa người dùng thành công "
+    destroy_fail: "Xóa người dùng thất bại"
+    destroy_post_success: "Xóa bài viết thành công"
+    destroy_post_fail: "Xóa bài viết thất bại"
+    load_user_fail: "Không thể tìm thấy người dùng"
+    create_post_success: "Tạo bài đánh giá thành công"
+    create_post_fail: "Tạo bài đánh giá thất bại"
+    post_update_success: "Cập nhật thành công"
+    permission_access: "Bạn không có quyền truy cập"
+    active_account: "Tài khoản chưa được kích hoạt"
+    check_email: "Kiểm tra email để kích hoạt tài khoản"
+    invalid: "Email hoặc mật khẩu của bạn không đúng"
+    wrong_quantity: "Số lượng đặt không được lớn hơn số vé còn lại"
+    quantity_nil: "Làm ơn chọn số lượng vé bạn muốn đặt"
+    booking_success: "Đặt vé thành công!"
+    booking_fail: "Đặt vé thất bại!"
+    destroy_booking_success: "Hủy đặt vé thành công"
+    destroy_booking_fail: "Hủy đặt vé thất bại"
+    search_failed: "Không tìm thấy kết quả"
+    post_load_fail: "Không tải được bài viết"
+    create_rate_succeed: "Đánh giá thành công"
+    create_rate_failed: "Đánh giá thất bại"
+    update_rate_succeed: "Cập nhật đánh giá thành công"
+    update_rate_failed: "Cập nhật đánh giá thất bại"
+    destroy_rate_succeed: "Xóa đánh giá thành công"
+    destroy_rate_failed: "Xóa đánh giá thất bại"
+    login_face_failed: "Đăng nhập Facebook thất bại"
+    destroy_comment_success: "Xóa bình luận thành công"
+    destroy_comment_failed: "Không xóa được bình luận"
+    create_comment_failed: "Không tạo được bình luận"
+    create_like_failed: "Không thể like bài viết này"
+    destroy_like_failed: "Không thể dislike bài viết này"
+    create_request_success: "Tạo yêu cầu thành công"
+    create_request_fail: "Tạo yêu cầu thất bại"
+    destroy_request_success: "Xóa yêu cầu thành công"
+    destroy_request_fail: "Xóa yêu cầu thất bại"
+
+  export:
+    export_excel: "Kết xuất bảng excel"
+
+  form:
+    name: "Tên người dùng"
+    dob: "Ngày tháng năm sinh"
+    password: "Mật khẩu "
+    password_confirm: "Mật khẩu xác nhận lại"
+    create_user: "Chào mừng bạn đến với trang web của tôi"
+    email: "Email"
+    avatar: "Ảnh đại diện"
+    request: "Request"
+
+  layouts:
+    admin_header:
+      dashboard: "Bảng Điều Khiển"
+    header:
+      home: "Trang chủ"
+      help: "Hỗ trợ"
+      search: "Nội dung tìm kiếm"
+      review_movie: "Đánh Giá Phim"
+      login: " Đăng nhập"
+      logout: "Đăng xuất"
+      sign_up: " Đăng ký"
+      profile: "Thông tin cá nhân"
+      booking: "Đặt vé"
+    footer:
+      address: "Địa chỉ"
+      about_us: "Về chúng tôi"
+      contact_us: "Liên Hệ"
+      language: "Ngôn ngữ"
+      english: "Tiếng Anh"
+      vietnamese: "Tiếng Việt"
+    search:
+      all: "Tất cả"
+      name: "Tên phim"
+      category: "Thể loại"
+      post: "Bài đăng"
+      request: "nếu bạn không tìm thấy điều này, bạn có thể gửi yêu cầu tới người quản trị tại đây"
+
+  pages:
+    home:
+      top_movie: "Top 10 phim ăn khách trong tuần"
+
+  admin:
+    films:
+      index:
+        film_list: "Danh sách phim"
+        create_new_film: "Tạo Phim Mới"
+        image: "Ảnh"
+        name: "Tên Phim"
+        play_time: "Thời lượng"
+        trailer: "Link Trailer"
+        imdb_rate: "Điểm IMDB"
+        status: "Trạng thái"
+        avg_rate: "Điểm người dùng"
+        submit: "Gửi"
+        pie_chart_films: "Biểu đồ tròn của phim chia theo thể loại"
+        describe: "Miêu tả"
+      film:
+        edit_film: "Chỉnh sửa phim"
+        delete: "Xóa bỏ"
+        you_sure: "Bạn chắc chắn muốn xóa không?"
+      edit:
+        name: "Tên phim"
+        play_time: "Thời lượng"
+        imdb: "Điểm imdb"
+        describe: "Mô tả"
+        image: "Ảnh bìa"
+        status: "Trạng thái"
+        old: "Phim Cũ"
+        now_playing: "Đang chiếu"
+        comming_soon: "Sắp chiếu"
+      new:
+        name: "Tên phim"
+        play_time: "Thời lượng"
+        imdb: "Điểm imdb"
+        describe: "Mô tả"
+      watching_day_fields:
+        watching_day: "Ngày chiếu"
+      watching_time_fields:
+        total_ticket: "Tổng số vé"
+        price: "Giá vé"
+        watching_time: "Thời gian"
+        time: "Thời gian bắt đầu"
+      film_form:
+        categories: "Thể loại"
+    post:
+      post_review: "Bài Viết"
+      list_posts: "Danh sách bài viết"
+      list_pending: "Bài viết đang chờ"
+      list_approved: "Bài viết đã duyệt"
+      manager_post: "Quản lí bài viết"
+      approve: "Phê duyệt"
+      unapprove: "Hủy phê duyệt"
+      back_to_post: "Quay trở lại"
+      pie_chart_post_reviews: "Biểu đồ tròn của bài đăng chia theo tỷ lệ phê duyệt"
+
+    admin:
+      film: "Phim"
+      user: "Người dùng"
+      booking: "Đặt vé"
+      comment: "Bình luận"
+      index:
+        new_users: "Người dùng mới"
+        new_post_reviews: "Bài viết mới"
+        new_bookings: "Đặt vé mới"
+        new_comments: "Bình luận mới"
+
+    users:
+      index:
+        name: "Tên người dùng"
+        email: "Email"
+        dob: "Ngày tháng năm sinh"
+        admin: "Quản trị viên"
+        address: "Địa chỉ"
+        uid: "ID người dùng Facebook"
+        user_list: "Danh sách người dùng"
+        line_chart_users: "Biểu đồ người dùng theo thời gian đăng ký"
+      user:
+        delete: "Xóa bỏ"
+        you_sure: "Bạn chắc muốn xóa không?"
+    comments:
+      index:
+        comment_list: "Danh sách bình luận"
+        name: "Người dùng bình luận"
+        post_review: "Bài viết bình luận"
+        content: "Nội dung bình luận"
+    bookings:
+      index:
+        booking_list: "Danh sách đặt vé"
+        name: "Tên người dùng"
+        film: "Phim được đặt vé"
+        watching_day: "Ngày đặt vé"
+        watching_time: "Giờ chiếu"
+        quantity: "Số lượng"
+        price: "Giá vé"
+        pie_chart_bookings: "Biểu đồ tròn đặt vé theo thời gian chiếu"
+
+  sessions:
+    new:
+      input_email: " Địa Chỉ Email"
+      input_password: "Mật Khẩu"
+      remember_me: "Nhớ tài khoản"
+      login: "Đăng nhập"
+      sign_up: "Đăng kí tài khoản"
+      new_user: "Người dùng mới"
+      forgot_password: "Quên mật khẩu"
+
+  password_resets:
+    new:
+      submit_button: "Gửi"
+      forgot_password: "Quên mật khẩu"
+    edit:
+      reset_password: "Khôi phục mật khẩu"
+
+  share:
+    error_messages:
+      error: "Lỗi"
+
+  users:
+    edit:
+      update_profile: "Cập nhật tài khoản"
+      edit_user: "Cập nhật thông tin"
+      change: "Thay Đổi"
+      close: "Đóng"
+      update: "Cập nhật thông tin cá nhân"
+      name: "Nhập tên"
+      email: "Nhập email"
+      dob: "Ngày sinh"
+    show:
+      edit: "Sửa"
+      hello: "Xin chào"
+      create_new_post: "Tạo bài viết mới"
+      my_booking: "Đặt vé"
+      film_name: "Tên phim"
+      day_watching: "Ngày chiếu"
+      time: "Giờ chiếu"
+      quantity: "Số vé"
+    index:
+      all_user: "Tất cả người dùng"
+    new:
+      signup: "Đăng kí tài khoản"
+    form:
+      input_name: "Nhập tên bạn vào đây"
+      input_dob: "Nhập ngày tháng năm sinh vào đây"
+      input_email: "Nhập email vào đây"
+      input_password: "Nhập mật khẩu vào đây"
+      input_password_confirm: "Nhập lại mật khẩu vào đây"
+      create: "Tạo tài khoản"
+      save_change: "Lưu thay đổi"
+      title: "Tiêu đề"
+      fill_title: "...Nhập nội dung..."
+      content: "Nội dung (Tối đa 100 kí tự)"
+      submit: "Gửi"
+
+  post_reviews:
+    new:
+      fill_content: "...Nhập nội dung..."
+    index:
+      my_post: "Danh sách bài viết của tôi"
+      approve: "Phê duyệt"
+      time: "Đăng ngày "
+    edit:
+      edit_post: "Sửa bài viết"
+    form:
+      fill_title: "...Nhập tiêu đề..."
+      submit_create: "Tạo bài viết"
+      submit_edit: "Xác nhận"
+      title: "Tiêu đề(Tối đa 50 kí tự)"
+      content: "Nội dung"
+      back_to_profile: "Trở về trang cá nhân của tôi"
+      image: "Ảnh bìa"
+    comment:
+      confirm: "Bạn chắc chắn muốn xóa không?"
+      ago: "trước"
+      comment: "Bình luận"
+      submit: "Đăng"
+    like: "Thích"
+    unlike: "Bỏ Thích"
+
+  shared:
+    post:
+      edit_post: "Sửa"
+      delete: "Xóa"
+      approve_true: "Đã duyệt"
+      approve_fail: "Chưa duyệt"
+      you_sure: "Chắc chưa?"
+    index:
+      title: "Tiêu đề"
+      content: "Nội dung"
+      approve: "Phê duyệt"
+      my_post_list: "Bài viết của tôi"
+    booking:
+      cancellation: "Hủy bỏ"
+      you_sure: "Bạn có chắc muốn hủy vé không?"
+
+  bookings:
+    index:
+      booking_online: "Đặt vé trực tuyến"
+      booking_ticket: "Đặt Vé"
+      day_watching: "Ngày chiếu"
+      time: "Thời gian bắt đầu"
+      quantity: "Số lượng"
+      price: "Giá vé"
+      total_price: "Tổng tiền"
+      remaining_ticket: "Số vé còn lại"
+
+  films:
+    show:
+      submit: "Gửi đánh giá"
+      imdb_rates: "Điểm IMDB"
+      audience_score: "Đánh giá của khán giả"
+      rating_film: "Đánh giá phim"
+      describe: "Mô tả"
+      review_section: "ĐÁNH GIÁ"
+      play_time: "Thời lượng"
+      minutes: "phút"
+      categories: "Thể loại"
+      watching_day: "Ngày chiếu"
+    rating:
+      ago: "trước"
+
+  search: "Tìm kiếm"

@@ -1,0 +1,23 @@
+$(function(){
+  $('#new_comment input[type="submit"]').on('click', function(e){
+    var post_id = $('#comment_post_review_id').val();
+    var comment_content = $('#comment_content').val();
+    params = {"comments": {"post_review_id": post_id, "content": comment_content}}
+    e.preventDefault();
+    $.ajax({
+      method: 'POST',
+      url: '/post_reviews/'+ post_id + '/comments',
+      type: 'JSON',
+      data: params
+    }).success(function(data){
+      if (data.status == "success") {
+        $('.header-comment').prepend(data.content);
+        $('#comment_content').val('');
+      } else {
+        alert('<%= I18n.t("flash.create_comment_failed") %>');
+      }
+    }).error(function(){
+      alert('<%= I18n.t("flash.create_comment_failed") %>');
+    });
+  });
+});

@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-8">
+      <div class="row well">
+        <div class="row">
+          <div class="col-md-1">
+            <h1><i class="fa fa-film" aria-hidden="true"></i></h1>
+          </div>
+          <div class="col-md-10 align-text-film">
+            <h1><%= @film.name %></h1>
+          </div>
+        </div>
+        <%= raw @film.link_trailer %></br></br>
+        <b><%= t ".describe" %>:</b>
+        <p><%= @film.describe.truncate(Settings.film.describe_minimum,
+          separator: " ") %></p>
+      </div>
+      <div class="row set-border">
+        <div class="col-md-4 col-remove-padding-left">
+          <%= image_tag @film.image %>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6 well align-items-center">
+              <h4><%= t ".imdb_rates" %></h4>
+              <%= image_tag "IMDB_Logo.png", class: "imdb-logo" %>
+              <h4><%= @film.imdb_rate %>&nbsp/&nbsp10&nbsp
+                <span class="star-color fa fa-star"></span></h4>
+            </div>
+            <div class="col-md-6 well align-items-center">
+              <h4><%= t ".audience_score" %></h4>
+              <%= image_tag "popcorn.png", class: "popcorn-logo" %>
+              <h4>
+                <span class="avg_rate_change">
+                <%= number_with_precision(@film.avg_rate, precision: 1) %>
+                </span>&nbsp/&nbsp10&nbsp
+                <span class="star-color fa fa-star"></span>
+              </h4>
+            </div>
+          </div>
+          <div class="row">
+            <%= render "films/rating_form" %>
+          </div>
+        </div>
+      </div>
+      <div class="row fix-margin-top">
+        <span class= "review-section-header"><%= t(".review_section")%>
+        </span>
+        <div class="col-md-12 review-section-body">
+          <%= render partial: "films/rating", collection: @ratings %>
+          <%= will_paginate @ratings %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<fieldset>
+  <div class="row">
+    <h4><%= t(".watching_time") %></h4>
+    <div class="col-md-8">
+      <%= f.label :time, t(".time") %>
+      <%= f.time_field :time, class: "form-control" %>
+      <%= f.label :total_ticket, t(".total_ticket") %>
+      <%= f.number_field :total_ticket, class: "form-control" %>
+      <%= f.label :price, t(".price") %>
+      <%= f.number_field :price, class: "form-control" %>
+    </div>
+    <div class="col-md-4">
+      <%= f.hidden_field :_destroy %>
+      <%= link_to_remove_fields %>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,3 @@
+<%= button_tag(type: 'submit', class: "btn like btn-primary btn-delete", id: (@like.present? ? @like.id : 0), onclick: "delete_like(this)") do %>
+  <span class="glyphicon glyphicon-thumbs-down" id="delete-like" ><%= @post.likes.count %></span> <%= t("post_reviews.unlike")%>
+<% end %>

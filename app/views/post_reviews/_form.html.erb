@@ -1,0 +1,11 @@
+<%= form_for @post do |f| %>
+  <%= f.label :title, t(".title") %>
+  <%= f.text_field :title, class: "form-control", placeholder: t(".fill_title") %></br>
+  <span class="picture">
+    <%= f.label :image, t("post_reviews.form.image") %>
+    <%= f.file_field :image %>
+  </span></br>
+  <%= f.label :content, t(".content") %>
+  <%= f.cktext_area :content, class: "form-control" %>
+  <%= f.submit t(".submit_edit"), class: "btn btn-primary" %>
+<% end %>

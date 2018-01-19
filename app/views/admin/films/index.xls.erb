@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ID</Data></Cell>
+        <Cell><Data ss:Type="String">Name</Data></Cell>
+        <Cell><Data ss:Type="String">Play Time</Data></Cell>
+        <Cell><Data ss:Type="String">IMDB Rate</Data></Cell>
+        <Cell><Data ss:Type="String">Status</Data></Cell>
+        <Cell><Data ss:Type="String">Audience Rate</Data></Cell>
+      </Row>
+    <% @films.each do |film| %>
+      <Row>
+        <Cell><Data ss:Type="Number"><%= film.id %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= film.name %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= film.play_time %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= film.imdb_rate %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= film.status %></Data></Cell>
+        <Cell><Data ss:Type="Number"><%= film.avg_rate %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

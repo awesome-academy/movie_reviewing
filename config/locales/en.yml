@@ -1,0 +1,336 @@
+en:
+  alert:
+    login: "Please login!"
+  flash:
+    find_user: "Can't find user with id: "
+    create_new_film: "Complete create film"
+    fail_create_film: "Fail create film"
+    update_film: "Film updated!"
+    fail_update_film: "Fails updated!"
+    delete_film: "Film deleted!"
+    fail_delete_film: "Fails delete!"
+    load_film: "Not film with id "
+    activate: "Account activated!"
+    invalid_activate: "Invalid activation link"
+    check_email: "Please check your email to activate your account."
+    success: "Account activated!"
+    invalid_link: "Invalid activation link"
+    update_profile: "Profile updated"
+    delete_user: "User deleted"
+    login: "Please log in."
+    password_reset: "Email sent with password reset instructions"
+    email_notfound: "Email address not found"
+    not_empty: "Not Empty"
+    reset: "Password has been reset."
+    password_expired: "Password reset has expired."
+    active_fail: "Account not activated."
+    check_link: "Check your email for the activation link."
+    invalid_email_password: "Invalid email/password combination"
+    cant_empty: "can't be empty"
+    account_activation: "Account activation"
+    password_reset_1: "Password reset"
+    cant_load: "Can't load user"
+    update_success: "Update Complete"
+    update_fail: "Failed update"
+    destroy_success: "Succeeded delete"
+    destroy_fail: "Failed delete"
+    destroy_post_success: "Succeeded delete post"
+    destroy_post_fail: "Failed delete post"
+    load_user_fail: "Can't find user with id "
+    create_post_success: "Create Post success"
+    create_post_fail: "Create Post Fail"
+    post_update_success: "Update Post success"
+    permission_access: "You don't have permission to access"
+    active_account: "Account not activated."
+    check_email: "Check your email for the activation link."
+    invalid: "Invalid email/password combination"
+    wrong_quantity: "Quantity can't greater than remaining ticket"
+    quantity_nil: "Please choose quantity you want booking"
+    booking_success: "Booking Succeeded!"
+    booking_fail: "Booking Failed!"
+    destroy_booking_success: "Succeeded cancellation  booking"
+    destroy_booking_fail: "Failed cancellation  booking"
+    search_failed: "Can't find the result"
+    post_load_fail: "Can't load post"
+    create_rate_succeed: "Rating succeed"
+    create_rate_failed: "Rating failed"
+    update_rate_succeed: "Update rate succeed"
+    update_rate_failed: "Update rate failed"
+    destroy_rate_succeed: "Delete rate succeed"
+    destroy_rate_failed: "Delete rate failed"
+    login_face_failed: "Login via Facebook failed"
+    destroy_comment_success: "Delete comment succeed"
+    destroy_comment_failed: "Delete comment failed"
+    create_comment_failed: "Create comment failed"
+    create_like_failed: "Can't like this Post"
+    destroy_like_failed: "Can't unlike this Post"
+    create_request_success: "Create request success"
+    create_request_fail: "Create request fail"
+    destroy_request_success: "Destroy request success"
+    destroy_request_fail: "Destroy request fail"
+
+  export:
+    export_excel: "Export Excel"
+
+  form:
+    name: "Name"
+    dob: "Date of birth"
+    password: "Password"
+    password_confirm: "Password Confirmation"
+    create_user: "Welcome to my page"
+    email: "Email"
+    avatar: "Avatar"
+    request: "Request"
+
+  layouts:
+    admin_header:
+      dashboard: "Dashboard"
+    header:
+      home: "Home"
+      help: "Help"
+      search: "Search"
+      review_movie: "Review Film"
+      login: " Log in"
+      logout: "Log out"
+      sign_up: " SignUp"
+      profile: "Profile"
+      booking: "Booking"
+    footer:
+      address: "Address"
+      about_us: "About Us"
+      contact_us: "Contact Us"
+      language: "Language"
+      english: "English"
+      vietnamese: "Vietnamese"
+    search:
+      all: "All"
+      name: "Film Name"
+      category: Category
+      post: "Post"
+      request: "If you can't find this, you can make request to admin"
+
+  pages:
+    home:
+      top_movie: "Top 10 movie in week"
+
+  admin:
+    films:
+      index:
+        film_list: "Film List"
+        create_new_film: "Create New Film"
+        image: "Image"
+        name: "Name"
+        play_time: "Play Time"
+        trailer: "Link Trailer"
+        imdb_rate: "IDBM Rate"
+        status: "Status"
+        avg_rate: "Audience Rate"
+        submit: "Submit"
+        pie_chart_films: "Pie Chart group by categori"
+        describe: "Describe"
+      film:
+        edit_film: "Edit Film"
+        delete: "Delete"
+        you_sure: "Are you sure?"
+      edit:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+        image: "Image"
+        status: "Status"
+        old: "Old"
+        now_playing: "Now Playing"
+        comming_soon: "Comming Soon"
+      new:
+        name: "Name"
+        play_time: "Play time"
+        imdb: "Imdb rate"
+        describe: "Describe"
+      watching_day_fields:
+        watching_day: "Watching Day"
+      watching_time_fields:
+        watching_time: "Watching Time"
+        time: "Time"
+        total_ticket: "Total Ticket"
+        price: "Price"
+      film_form:
+        categories: "Categories"
+    post:
+      post_review: "Post Review"
+      list_posts: "List posts"
+      list_pending: "List Pending"
+      list_approved: "List Approved"
+      manager_post: "Manager Post"
+      approve: "Approve"
+      unapprove: "Unapprove"
+      back_to_post: "Back"
+      pie_chart_post_reviews: "Pie chart posts review group by approve"
+
+    admin:
+      film: "Films"
+      user: "Users"
+      booking: "Bookings"
+      comment: "Comments"
+      index:
+        new_users: "New Users"
+        new_post_reviews: "New Posts Review"
+        new_bookings: "New Bookings"
+        new_comments: "New Comments"
+
+    users:
+      index:
+        name: "User Name"
+        email: "Email"
+        dob: "Day of Birth"
+        admin: "Admin"
+        address: "Address"
+        uid: "Uid Facebook"
+        user_list: "User List"
+        line_chart_users: "Line chart users group by create time"
+      user:
+        delete: "Delete"
+        you_sure: "Are you sure?"
+    comments:
+      index:
+        comment_list: "Comment List"
+        name: "User commented"
+        post_review: "Post Review"
+        content: "Content"
+    bookings:
+      index:
+        booking_list: "Booking List"
+        name: "User Name"
+        film: "Film Booking"
+        watching_day: "Watching Day"
+        watching_time: "Watching Time"
+        quantity: "Quantity"
+        price: "Price"
+        pie_chart_bookings: "Pie chart booking group by Watching Time"
+
+  sessions:
+    new:
+      input_email: "Email"
+      input_password: "Password"
+      remember_me: "Remember me on this computer"
+      login: "Log in"
+      sign_up: "Sign up now!"
+      new_user: "New user?"
+      forgot_password: "Forgot password"
+
+  password_resets:
+    new:
+      submit_button: "Submit"
+      forgot_password: "Forgot password"
+    edit:
+      reset_password: "Reset password"
+
+  share:
+    error_messages:
+      error: "Error"
+
+  users:
+    edit:
+      update_profile: "Update Your Profile"
+      edit_user: "Edit User"
+      change: "Change"
+      close: "Close"
+      update: "Update Your Profile"
+      name: "Name"
+      email: "Email"
+      dob: "Date of birth"
+    show:
+      edit: "Edit Profile"
+      hello: "Hello"
+      create_new_post: "Create New Post"
+      my_booking: "My Booking"
+      film_name: "Film Name"
+      day_watching: "Day Watching"
+      time: "Time Watching"
+      quantity: "Quantity"
+    index:
+      all_user: "All User"
+    new:
+      signup: "Sign Up"
+    form:
+      input_name: "Please input your name here"
+      input_dob: "Input your date of birth here"
+      input_email: "Please input your email here"
+      input_password: "Input your password"
+      input_password_confirm: "Input your password confirmation"
+      create: "Create my account"
+      save_change: "Save changes"
+      title: "Title"
+      fill_title: "Fill Title"
+      content: "Content (Max 100 characters)"
+      submit: "Send"
+
+  post_reviews:
+    new:
+      fill_content: "...Fill content..."
+    index:
+      my_post: "List Post "
+      approve: "Approve"
+      time: "Posted in "
+    edit:
+      edit_post: "Edit Post"
+    form:
+      fill_title: "...Fill title..."
+      submit_edit: "Submit"
+      submit_create: "Create Post"
+      title: "Title(Max 50 character)"
+      content: "Content"
+      back_to_profile: "Back to my profile"
+      image: "Image"
+    comment:
+      confirm: "You sure?"
+      ago: "ago"
+      comment: "Comment"
+      submit: "Post"
+    like: "Like"
+    unlike: "Unlike"
+
+  shared:
+    post:
+      edit_post: "Edit"
+      delete: "Delete"
+      approve_true: "True"
+      approve_fail: "False"
+      you_sure: "You sure?"
+    index:
+      title: "Title"
+      content: "Content"
+      approve: "Approve"
+      my_post_list: "My Post"
+    booking:
+      cancellation: "Cancellation"
+      you_sure: "You sure?"
+
+  bookings:
+    index:
+      booking_online: "Booking Online"
+      booking_ticket: "Booking Ticket"
+      day_watching: "Day Watching"
+      time: "Time Start"
+      quantity: "Quantity"
+      price: "Price"
+      total_price: "Total Price"
+      remaining_ticket: "Remanining Ticket"
+
+  films:
+    show:
+      submit: "Rating"
+      imdb_rates: "IMDB RATES"
+      audience_score: "AUDIENCE SCORE"
+      rating_film: "Rating Film"
+      describe: "Describe"
+      review_section: "REVIEW SECTION"
+      play_time: "Play Time"
+      minutes: "minutes"
+      categories: "Categories"
+      watching_day: "Watching Day"
+    rating:
+      ago: "ago"
+
+  search: "Search"
+

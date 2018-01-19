@@ -1,0 +1,20 @@
+<div class="row">
+  <%= line_chart chart_user, title: t(".line_chart_users") %>
+  <h2 class="sub-header"><%= t ".user_list" %></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t ".name" %></th>
+          <th><%= t ".email" %></th>
+          <th><%= t ".admin" %></th>
+          <th><%= t ".uid" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "user", collection: @users %>
+      </tbody>
+    </table>
+    <%= will_paginate @users %>
+  </div>
+</div>

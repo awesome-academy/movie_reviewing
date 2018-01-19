@@ -1,0 +1,75 @@
+<div class="container">
+  <h2><%= t ".booking_online" %></h2>
+  <div class="row">
+    <% @films.each do |film| %>
+      <div class="container">
+        <div class="col-md-3">
+          <h3><%= film.name %></h3>
+          <%= image_tag film.image %>
+          <p><%= film.describe %></p>
+        </div>
+        <div class="col-md-9"></br></br></br>
+          <% film.watching_days.each do |watching_day| %>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion"
+                    href="#collapse<%= watching_day.id%>"><%= watching_day.day_watching.strftime("%d-%m-%Y") %></a>
+                </h4>
+              </div>
+              <div id="collapse<%= watching_day.id%>" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <% watching_day.watching_times.each do |watching_time|%>
+                    <button type="button" class="btn btn-info fix-css-button"
+                      data-toggle="modal" data-target="#myModal<%= watching_time.id %>">
+                      <%= watching_time.time.to_formatted_s(:time) %>
+                    </button>
+                    <div id="myModal<%= watching_time.id %>" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title"><%= t ".booking_ticket" %></h4>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="col-md-4">
+                                <%= image_tag watching_time.watching_day.film.image %>
+                              </div>
+                              <div class="col-md-8">
+                                <b><%= t ".day_watching" %>&nbsp:</b>
+                                <%= watching_time.watching_day.day_watching.strftime("%d-%m-%Y") %></br>
+                                <b><%= t ".time" %>&nbsp:</b>
+                                <%= watching_time.time.to_formatted_s :time %></br>
+                                <b><%= t ".remaining_ticket" %>&nbsp:</b>
+                                <%= watching_time.remaining_ticket %></br>
+                                <b><%= t ".price" %>&nbsp:</b>
+                                <%= number_with_precision(watching_time.price,
+                                  precision: 0, separator: ',', delimiter: '.') %></br>
+                                <%= form_for :booking do |f| %>
+                                  <%= f.hidden_field :watching_time_id, value: watching_time.id %>
+                                  <%= f.label :quantity, t(".quantity") %>
+                                  <%= f.number_field :quantity, in: 1..20,
+                                    class: "form-control", placeholder: t(".quantity") %>
+                                  <%= f.submit t(".booking_ticket"), class: "btn btn-primary"%>
+                                <% end %>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

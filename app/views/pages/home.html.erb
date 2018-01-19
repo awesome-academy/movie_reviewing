@@ -1,0 +1,135 @@
+<div class="container">
+<div class="row">
+  <div class="col-sm-8">
+    <div id="myCarousel1" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel1" data-slide-to="1"></li>
+        <li data-target="#myCarousel1" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <%=  image_tag "thor3.jpg" %>
+          <div class="carousel-caption">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+        <div class="item">
+          <%=  image_tag "thor3.jpg" %>
+          <div class="carousel-caption">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+        <div class="item">
+          <%=  image_tag "thor3.jpg" %>
+          <div class="carousel-caption">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel1" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel1" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="well">
+      <table>
+        <tr>
+          <td>
+            <h3><%= t".top_movie" %></h3>
+          </td>
+        </tr>
+        <% @movie_title.each do |movie| %>
+          <tr>
+            <td><%= movie.text %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%= render "slider" %>
+
+<div class="container text-center">
+  <h3>Lorem ipsum</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-3">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-3">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-3">
+      <div class="well">
+       <p>Lorem ipsum...</p>
+      </div>
+      <div class="well">
+       <p>Lorem ipsum...</p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="well">
+       <p>Lorem ipsum...</p>
+      </div>
+      <div class="well">
+       <p>Lorem ipsum...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container text-center">
+  <h3>Lorem ipsum...</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+    <div class="col-sm-2">
+      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive"
+        alt="Image">
+      <p>Lorem ipsum</p>
+    </div>
+  </div>
+</div>

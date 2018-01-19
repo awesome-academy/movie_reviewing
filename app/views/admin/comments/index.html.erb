@@ -1,0 +1,18 @@
+<div class="row">
+  <h2 class="sub-header"><%= t ".comment_list" %></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t ".name" %></th>
+          <th><%= t ".post_review" %></th>
+          <th><%= t ".content" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: "comment", collection: @comments %>
+      </tbody>
+    </table>
+    <%= will_paginate @comments %>
+  </div>
+</div>
