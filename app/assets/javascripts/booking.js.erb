@@ -2,18 +2,20 @@ $(function(){
   $('.cancellation-booking').on('click', function(event){
     event.preventDefault();
     var booking_id =  this.id;
+    var confirm_del = confirm('<%= I18n.t("post_reviews.comment.confirm") %>');
+    if (confirm_del == true) {
     $.ajax({
       method: 'DELETE',
       url: "/bookings/" + booking_id
     }).success(function(data){
       if (data.status == "success"){
+        $('#booking-'+ booking_id).remove();
         alert('<%= I18n.t("flash.destroy_booking_success") %>')
       } else {
         alert('<%= I18n.t("flash.destroy_booking_fail") %>')
       }
-      $('#booking-'+ booking_id).remove();
     }).error(function(){
       alert('<%= I18n.t("flash.destroy_booking_fail") %>');
     });
-  });
+  }});
 })

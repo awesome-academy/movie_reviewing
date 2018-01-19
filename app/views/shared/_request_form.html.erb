@@ -1,0 +1,8 @@
+<%= form_for(@request) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :title, t("users.form.title") %>
+  <%= f.text_field :title, class: "form-control", placeholder: t("users.form.fill_title") %></br>
+  <%= f.label :content, t("users.form.content") %>
+  <%= f.cktext_area :content, class: "form-control" %>
+  <%= f.submit t("users.form.submit"), class: "btn btn-primary" %>
+<% end %>

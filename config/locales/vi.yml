@@ -64,6 +64,10 @@ vi:
     create_comment_failed: "Không tạo được bình luận"
     create_like_failed: "Không thể like bài viết này"
     destroy_like_failed: "Không thể dislike bài viết này"
+    create_request_success: "Tạo yêu cầu thành công"
+    create_request_fail: "Tạo yêu cầu thất bại"
+    destroy_request_success: "Xóa yêu cầu thành công"
+    destroy_request_fail: "Xóa yêu cầu thất bại"
 
   export:
     export_excel: "Kết xuất bảng excel"
@@ -76,6 +80,7 @@ vi:
     create_user: "Chào mừng bạn đến với trang web của tôi"
     email: "Email"
     avatar: "Ảnh đại diện"
+    request: "Request"
 
   layouts:
     admin_header:
@@ -102,6 +107,7 @@ vi:
       name: "Tên phim"
       category: "Thể loại"
       post: "Bài đăng"
+      request: "nếu bạn không tìm thấy điều này, bạn có thể gửi yêu cầu tới người quản trị tại đây"
 
   pages:
     home:
@@ -164,10 +170,8 @@ vi:
     admin:
       film: "Phim"
       user: "Người dùng"
-      film: "Phim"
       booking: "Đặt vé"
       comment: "Bình luận"
-
       index:
         new_users: "Người dùng mới"
         new_post_reviews: "Bài viết mới"
@@ -256,6 +260,10 @@ vi:
       input_password_confirm: "Nhập lại mật khẩu vào đây"
       create: "Tạo tài khoản"
       save_change: "Lưu thay đổi"
+      title: "Tiêu đề"
+      fill_title: "...Nhập nội dung..."
+      content: "Nội dung (Tối đa 100 kí tự)"
+      submit: "Gửi"
 
   post_reviews:
     new:
@@ -323,3 +331,5 @@ vi:
       watching_day: "Ngày chiếu"
     rating:
       ago: "trước"
+
+  search: "Tìm kiếm"

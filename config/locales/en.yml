@@ -64,6 +64,10 @@ en:
     create_comment_failed: "Create comment failed"
     create_like_failed: "Can't like this Post"
     destroy_like_failed: "Can't unlike this Post"
+    create_request_success: "Create request success"
+    create_request_fail: "Create request fail"
+    destroy_request_success: "Destroy request success"
+    destroy_request_fail: "Destroy request fail"
 
   export:
     export_excel: "Export Excel"
@@ -76,6 +80,7 @@ en:
     create_user: "Welcome to my page"
     email: "Email"
     avatar: "Avatar"
+    request: "Request"
 
   layouts:
     admin_header:
@@ -102,6 +107,7 @@ en:
       name: "Film Name"
       category: Category
       post: "Post"
+      request: "If you can't find this, you can make request to admin"
 
   pages:
     home:
@@ -160,6 +166,7 @@ en:
       unapprove: "Unapprove"
       back_to_post: "Back"
       pie_chart_post_reviews: "Pie chart posts review group by approve"
+
     admin:
       film: "Films"
       user: "Users"
@@ -253,6 +260,10 @@ en:
       input_password_confirm: "Input your password confirmation"
       create: "Create my account"
       save_change: "Save changes"
+      title: "Title"
+      fill_title: "Fill Title"
+      content: "Content (Max 100 characters)"
+      submit: "Send"
 
   post_reviews:
     new:
@@ -320,3 +331,6 @@ en:
       watching_day: "Watching Day"
     rating:
       ago: "ago"
+
+  search: "Search"
+

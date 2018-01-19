@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get "pages/help"
   get "/signup",  to: "users#new"
   get "/login",   to: "sessions#new"
-  get "/search", to: "searchs#index"
+  get :index, controller: :searchs
   post "/login",   to: "sessions#create"
   delete "/logout",  to: "sessions#destroy"
 
@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   resources :bookings, only: [:index, :create, :destroy]
   resources :films, only: [:show]
   resources :ratings, only: [:create, :update, :destroy]
+  resources :requests
 
   namespace :admin do
     root "admin#index"

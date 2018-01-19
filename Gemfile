@@ -27,6 +27,8 @@ gem "bootstrap-will_paginate"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "chartkick"
+gem "ransack"
+gem 'turbolinks', '~> 5'
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

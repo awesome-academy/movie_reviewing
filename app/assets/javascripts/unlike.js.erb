@@ -10,10 +10,10 @@ $(function(){
           $('.button-like').append(data.content);
           $('.btn-delete').remove();
         } else {
-          alert('<%= I18n.t("flash.destroy_rate_failed") %>');
+          alert("<%= I18n.t("flash.destroy_like_failed") %>");
         }
       }).error(function(){
-        alert('<%= I18n.t("flash.destroy_rate_failed") %>');
+        alert("<%= I18n.t("flash.destroy_like_failed") %>");
       });
     }
   }

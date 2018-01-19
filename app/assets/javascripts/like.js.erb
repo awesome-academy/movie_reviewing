@@ -1,4 +1,5 @@
 $(function(){
+  if($('.button-like')[0]){
   if($('.button-like')[0].id!="0"){
     $('.btn-create').hide();
     $('.btn-delete').show();
@@ -18,10 +19,10 @@ $(function(){
         $('.button-like').append(data.content);
         $('.btn-create').remove();
       } else {
-        alert('<%= I18n.t("flash.destroy_rate_failed") %>');
+        alert("<%= I18n.t("flash.create_like_failed") %>");
       }
     }).error(function(){
-      alert('<%= I18n.t("flash.destroy_rate_failed") %>');
+      alert("<%= I18n.t("flash.create_like_failed") %>");
     });
   };
-});
+}});

@@ -4,7 +4,7 @@
   <td><%= booking.watching_time.time.to_formatted_s :time %></td>
   <td><%= booking.quantity %></td>
   <td>
-    <%= link_to t(".cancellation"), "#", data: {confirm: t(".you_sure")},
+    <%= link_to t(".cancellation"), "#",
       class: "cancellation-booking", id: booking.id %>
   </td>
 </tr>

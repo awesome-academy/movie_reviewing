@@ -1,38 +1,32 @@
-<div class="container">
-  <ul>
-    <% if @search_films %>
-      <% @search_films.each do |film| %>
-        <div class="row">
-          <li class="col-md-3">
-            <%= image_tag film.image %>
-          </li>
-          <li class="col-md-9">
-            <%= link_to film.name, film_path(film) %></br>
-            <%= film.describe %>
-          </li>
-        </div>
-      <% end %>
+<div class="row">
+  <div class="col">
+    <h1>Films</h1>
+    <% @films.each do |film| %>
+    <div class="row set-border">
+        <div class="col-md-4 col-remove-padding-left">
+      <%= image_tag film.image %>
+      </div>
+      <p><%= link_to film.name, film_path(film) %></p>
+      <p><%= film.describe.truncate(Settings.film.describe_minimum,
+          separator: " ") %></p>
+      </div>
     <% end %>
+  </div>
 
-    <% if @search_categories %>
-      <% @search_categories.each do |category| %>
-        <div class="row">
-          <li class="col-md-3">
-            <%= image_tag category.film.image %>
-          </li>
-          <li class="col-md-9">
-            <%= link_to category.film.name, film.path(film) %></br>
-            <%= category.film.describe %>
-          </li>
-        </div>
-      <% end %>
+  <div class="col">
+    <h1>Posts</h1>
+    <% @posts.each do |post| %>
+    <div class="row set-border">
+        <div class="col-md-4 col-remove-padding-left">
+        <%= image_tag post.image %>
+      </div>
+      <p><%= link_to post.title, post_review_path(post) %></p>
+      </div>
     <% end %>
-
-    <% if @search_posts %>
-      <% @search_posts.each do |post| %>
-        <%= link_to post.title, post_review_path(post) %>
-        <%= raw post.content.truncate(250, separator: " ") %>
-      <% end %>
-    <% end %>
-  </ul>
+  </div>
 </div>
+
+<p><%= link_to t("layouts.search.request"), new_request_path %></p>
+
+
+

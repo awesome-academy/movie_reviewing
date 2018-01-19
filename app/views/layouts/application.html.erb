@@ -6,8 +6,8 @@
     <%= csrf_meta_tags %>
     <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
     <%= stylesheet_link_tag "application", media: "all" %>
-    <%= javascript_include_tag "application" %>
-
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= render "layouts/login_signup_modal" %>

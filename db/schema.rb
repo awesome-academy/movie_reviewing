@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180103125143) do
+ActiveRecord::Schema.define(version: 20180119074339) do
 
   create_table "bookings", force: :cascade do |t|
     t.integer "user_id"
@@ -98,6 +98,13 @@ ActiveRecord::Schema.define(version: 20180103125143) do
     t.index ["film_id", "user_id"], name: "index_ratings_on_film_id_and_user_id", unique: true
     t.index ["film_id"], name: "index_ratings_on_film_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.text "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
