@@ -125,7 +125,7 @@ vi:
   pages:
     home:
       top_movie: "Top 10 phim ăn khách trong tuần"
-      hot_post: "Các bài post được yêu thích"
+      hot_post: "3 bài đánh giá được yêu thích nhất"
     slider:
       new_post: "Bài đánh giá mới"
 
@@ -284,9 +284,6 @@ vi:
       fill_title: "...Nhập nội dung..."
       content: "Nội dung (Tối đa 100 kí tự)"
       submit: "Gửi"
-    search:
-      film: "Phim"
-      post: "Bài đánh giá"
 
   post_reviews:
     new:

@@ -4,20 +4,24 @@ $(function(){
     var comment_content = $('#comment_content').val();
     params = {"comments": {"post_review_id": post_id, "content": comment_content}}
     e.preventDefault();
-    $.ajax({
-      method: 'POST',
-      url: '/post_reviews/'+ post_id + '/comments',
-      type: 'JSON',
-      data: params
-    }).success(function(data){
-      if (data.status == "success") {
-        $('.header-comment').html(data.content);
-        $('#comment_content').val('');
-      } else {
+    if($('#user_profile')[0]){
+      $.ajax({
+        method: 'POST',
+        url: '/post_reviews/'+ post_id + '/comments',
+        type: 'JSON',
+        data: params
+      }).success(function(data){
+        if (data.status == "success") {
+          $('.header-comment').prepend(data.content);
+          $('#comment_content').val('');
+        } else {
+          alert('<%= I18n.t("flash.create_comment_failed") %>');
+        }
+      }).error(function(){
         alert('<%= I18n.t("flash.create_comment_failed") %>');
-      }
-    }).error(function(){
-      alert('<%= I18n.t("flash.create_comment_failed") %>');
-    });
+      });
+    }else {
+      $("#Login_Modal").modal();
+    }
   });
 });

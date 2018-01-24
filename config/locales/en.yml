@@ -125,9 +125,9 @@ en:
   pages:
     home:
       top_movie: "Top 10 movie in week"
-      hot_post: "Hot Post"
+      hot_post: "Top 3 Posts"
     slider:
-      new_post: "New PostReview"
+      new_post: "New Post Review"
 
   admin:
     films:
@@ -284,9 +284,6 @@ en:
       fill_title: "Fill Title"
       content: "Content (Max 100 characters)"
       submit: "Send"
-    search:
-      film: "Film"
-      post: "Post Review"
 
   post_reviews:
     new:

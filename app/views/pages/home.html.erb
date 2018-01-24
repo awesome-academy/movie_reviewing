@@ -73,6 +73,7 @@
                   <div class="caption">
                       <h4><%= hot.title %></h4>
                       <p><%= hot.content.truncate(Settings.post.describe_maximum, separator: " ") %></p>
+                      <h3><span class="glyphicon glyphicon-thumbs-up" id="create-like" ><%= hot.likes.count %></span></h3>
                   </div>
                 </div>
               <% end %>
